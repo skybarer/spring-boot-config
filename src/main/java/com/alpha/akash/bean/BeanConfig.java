@@ -14,9 +14,9 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
 
     @Bean
-    public App b(ApplicationContext applicationContext, com.alpha.akash.config.Configuration config) {
+    public App b(ApplicationContext context, com.alpha.akash.config.Configuration config) {
         App.config = config;
-        App.context = applicationContext;
+        App.context = context;
         return new App();
     }
 }

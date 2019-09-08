@@ -30,10 +30,4 @@ public class AkashApplication {
         systemEnvironment.setProperties();
         configuration.refresh();
     }
-
-//	@Bean
-//	public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomize(){
-//		return factory -> factory.setContextPath("/");
-//	}
-
 }
