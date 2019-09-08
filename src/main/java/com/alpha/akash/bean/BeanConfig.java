@@ -15,8 +15,8 @@ public class BeanConfig {
 
     @Bean
     public App b(ApplicationContext applicationContext, com.alpha.akash.config.Configuration config) {
-        App.configuration = config;
-        App.applicationContext = applicationContext;
+        App.config = config;
+        App.context = applicationContext;
         return new App();
     }
 }

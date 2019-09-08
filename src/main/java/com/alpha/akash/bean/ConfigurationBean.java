@@ -14,7 +14,7 @@ public class ConfigurationBean {
 
     @Bean
     public com.alpha.akash.config.Configuration configuration() {
-        return new DBConfiguration("/");
+        return new DBConfiguration("spring");
     }
 }
 

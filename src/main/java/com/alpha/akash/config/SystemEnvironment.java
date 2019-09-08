@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SystemEnvironment {
-    Configuration configuration = App.configuration;
+    Configuration configuration = App.config;
 
     public void setProperties() {
 //        if (App.configuration.getBoolean(ConfigKey.SYSTEM_ENV_ENABLED)) {

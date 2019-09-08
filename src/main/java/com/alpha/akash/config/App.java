@@ -11,13 +11,12 @@ import org.springframework.context.ApplicationContext;
  * @time : 01:01 PM
  */
 public class App {
+    public static ApplicationContext context;
+    public static Configuration config;
     private static Logger logger = LoggerFactory.getLogger(App.class);
 
-    public static ApplicationContext applicationContext;
-    public static Configuration configuration;
-
     public static <T> T getBean(String beanType, Class<T> clazz) throws BeansException {
-        String beanName = configuration.getString(beanType);
-        return applicationContext.getBean(beanName, clazz);
+        String beanName = config.getString(beanType);
+        return context.getBean(beanName, clazz);
     }
 }

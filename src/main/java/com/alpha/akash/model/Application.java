@@ -9,5 +9,6 @@ import lombok.Data;
  */
 @Data
 public class Application {
-    private String status;
+    private String state;
+    private String environment;
 }

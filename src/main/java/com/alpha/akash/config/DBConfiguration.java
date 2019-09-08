@@ -21,11 +21,9 @@ public class DBConfiguration extends Configuration {
     private static Logger logger = LoggerFactory.getLogger(DBConfiguration.class);
 
     public String type;
-
+    public Map<String, String> inMemoryConfigMap = new HashMap<>();
     @Autowired
     private ConfigurationRepository configurationRepository;
-
-    public Map<String, String> inMemoryConfigMap = new HashMap<>();
 
     public DBConfiguration(String app) {
         super(app);
@@ -109,7 +107,7 @@ public class DBConfiguration extends Configuration {
     public void refresh() {
         inMemoryConfigMap.clear();
         List<ConfigurationData> configurationData = configurationRepository.findByApp(getApp());
-        logger.info("Reloading config: {}", configurationData);
+        logger.info("App DB Configuration: {}", configurationData);
         configurationData.forEach(config -> inMemoryConfigMap.put(config.getConfigKey(), config.getConfigValue()));
     }
 }
